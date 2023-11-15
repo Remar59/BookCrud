@@ -13,7 +13,7 @@ $app->addRoutes([
     ['GET', '/', 'HomeController@index'],
     ['GET', '/livres', 'BookController@list'],
     ['GET', '/livres/[i:id]', 'BookController@show'],
-    ['GET', '/ajout', 'ajout.html.php'],
+    ['GET', '/ajout', 'BookController@add'],
 
 
 ]);

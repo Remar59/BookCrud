@@ -9,7 +9,7 @@ class BookController
 {
     public function list()
     {
-        $title = 'Livres';
+        $title = 'livres';
         $books = Book::all();
 
         return View::render('books/list', [
@@ -31,9 +31,38 @@ class BookController
             'book' => $book,
         ]);
     }
+    
 
     public function add()
     {
-    return View::render('ajout');
-}
+        return View::render('ajout');
+    }
+
+
+    public function create()
+    {
+        $book = new Book();
+        $book->title = $_POST['title'] ?? null;
+        $errors = [];
+
+        if (!empty($_POST)) {
+            if (empty($book->title)) {
+                $errors['name'] = 'Le nom est invalide.';
+            }
+
+            if (empty($errors)) {
+// dans le save on met le nom des colonnes de la table
+// peut être réutiliser en ajoutant des champs sur une autre variable (book, car...)
+
+                $book->save(['title','price','discount','isbn','author','published_at','image']);
+                //view redirect vers utilisateurs
+
+            }
+        }
+
+        return View::render('ajout', [
+            'errors' => $errors,
+            'user' => $book,
+        ]);
+    }
 }

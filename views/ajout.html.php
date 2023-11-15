@@ -1,6 +1,8 @@
+
 <?php require 'partials/header.html.php';
 
-$title = 'Ajouter un livre';
+
+$title = 'ajout';
 
 //récupérer les données 1ère étape à réaliser, de tous les champs du formulaire
 $btitle = $_POST['title'] ?? null;
@@ -12,6 +14,8 @@ $publishedAt = $_POST['published_at'] ?? null;
 $errors = [];
 
 //vérifier les champs
+
+
 
 if (!empty($_POST)) {
     if (empty($btitle)) {
@@ -44,6 +48,7 @@ if (!checkdate($checked[1] ?? 0, $checked[2] ?? 0, (int) $checked[0])) {
 }
 
 
+
 if (empty($errors)) {
     insert('INSERT INTO books (title,price,discount,isbn,author,published_at,image)
     VALUES (?,?,?,?,?,?,?)', [
@@ -58,7 +63,7 @@ if (empty($errors)) {
     addMessage('Votre livre a bien été ajouté !');
 
     // redirige vers la bonne page après la requête
-    redirect('livres.php');
+    header("Location: '/livres'");
 }
 
 ?>
@@ -115,5 +120,5 @@ if (empty($errors)) {
 </div>
 
 <?php
-require 'partials/footer.php'
+require 'partials/footer.html.php';
 ?>

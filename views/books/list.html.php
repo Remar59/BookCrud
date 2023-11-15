@@ -57,7 +57,7 @@
             <?php } ?>
 
         <div class="text-center mb-8">
-            <a class="bg-gray-900 px-4 py-2 text-white inline-block rounded hover:bg-gray-700 duration-200" href="/ajout.php">
+            <a class="bg-gray-900 px-4 py-2 text-white inline-block rounded hover:bg-gray-700 duration-200" href="/ajout">
                 Créer un livre
             </a>
         </div>

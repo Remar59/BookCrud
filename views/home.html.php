@@ -4,4 +4,5 @@
     <h1 class="text-2xl">Accueil</h1>
 </div>
 
+
 <?php require 'partials/footer.html.php'; ?>

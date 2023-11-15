@@ -9,7 +9,7 @@ class Database
     public static function get()
     {
         if (null === self::$instance) {
-            self::$instance = new \PDO('mysql:host=localhost;dbname=m2i', 'root', '');
+            self::$instance = new \PDO('mysql:host=localhost;dbname=books', 'root', '');
         }
 
         return self::$instance;
