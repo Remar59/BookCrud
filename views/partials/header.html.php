@@ -11,7 +11,7 @@
     <div class="max-w-5xl mx-auto px-3 mb-8">
         <div class="flex justify-between items-center py-6 border-b">
             <h2 class="text-3xl">
-                <a href="/">Book PHP</a>
+                <a href="/livres">Book PHP</a>
             </h2>
             <form class="relative" action="livres.php">
                 <input type="text" name="search" class="px-3 pl-8 rounded-lg border-gray-300" value="<?= $search ?? ''; ?>">
@@ -21,8 +21,8 @@
             </form>
             <ul>
                 <li>
-                    <a class="px-4" href="/home">Accueil</a>
-                    <a class="px-4" href="livres.php">Livres</a>
+                    <a class="px-4" href="/livres">Accueil</a>
+                    <a class="px-4" href="/livres">Livres</a>
                     <a class="px-4" href="/cart">Panier (0)</a>
                     <a class="px-4" href="/login">Connexion</a>
                     <a class="px-4" href="/a-propos">A propos</a>

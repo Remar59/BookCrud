@@ -1,4 +1,4 @@
-<?php require 'partials/header.html.php'; 
+<?php require 'partials/header.html.php';
 
 $title = 'Ajouter un livre';
 
@@ -55,9 +55,9 @@ if (empty($errors)) {
         $publishedAt,
         'uploads/05.jpg',
     ]);
-addMessage('Votre livre a bien été ajouté !');
+    addMessage('Votre livre a bien été ajouté !');
 
-// redirige vers la bonne page après la requête
+    // redirige vers la bonne page après la requête
     redirect('livres.php');
 }
 

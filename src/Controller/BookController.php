@@ -31,4 +31,9 @@ class BookController
             'book' => $book,
         ]);
     }
+
+    public function add()
+    {
+    return View::render('ajout');
+}
 }
